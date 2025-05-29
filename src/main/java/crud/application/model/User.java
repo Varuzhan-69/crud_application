@@ -16,7 +16,7 @@ public class User {
     @NotBlank(message="Имя - обязательное поле")
     private String name;
 
-    @Column(name="lastname")
+    @Column(name="lastName")
     @NotBlank(message="Фамилия - обязательное поле")
     private String lastName;
 
@@ -80,7 +80,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Пользователь {" +
+        return "{" +
                 "с именем ='" + name + '\'' +
                 ", фамилией ='" + lastName + '\'' +
                 ", возрастом =" + age +

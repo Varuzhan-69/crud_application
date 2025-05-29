@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -39,7 +40,7 @@ public class UserController {
             return "new";
         }
         userService.save(user);
-        return "redirect:/";
+        return "redirect:/users/";
     }
 
     @GetMapping("/{id}/edit")
@@ -55,12 +56,12 @@ public class UserController {
             return "edit";
         }
         userService.update(id, user);
-        return "redirect:/";
+        return "redirect:/users/";
     }
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
         userService.delete(id);
-        return "redirect:/";
+        return "redirect:/users/";
     }
 }

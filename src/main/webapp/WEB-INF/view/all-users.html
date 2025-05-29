@@ -24,20 +24,20 @@
         <td th:text="${user.getAge()}">Age</td>
         <td th:text="${user.getBank()}">Bank</td>
         <td>
-            <a th:href="@{/{id}(id=${user.getId()})}">Показать</a>
+            <a th:href="@{/users/{id}(id=${user.getId()})}">Показать</a>
         </td>
         <td>
-            <a th:href="@{/{id}/edit(id=${user.getId()})}">Изменить</a>
+            <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Изменить</a>
         </td>
         <td>
-            <form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
+            <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">
                 <input type="submit" value="Удалить"/>
             </form>
         </td>
     </tr>
     </tbody>
 </table>
-<a th:href="@{/new}">Создать пользователя</a>
+<a th:href="@{/users/new}">Создать пользователя</a>
 <br>
 </body>
 </html>
